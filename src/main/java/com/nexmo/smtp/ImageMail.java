@@ -6,7 +6,7 @@ import org.springframework.mail.javamail.MimeMessagePreparator;
 
 import javax.mail.internet.MimeMessage;
 
-public class SimpleTextMail implements MimeMessagePreparator {
+public class ImageMail implements MimeMessagePreparator {
 
 
     @Override

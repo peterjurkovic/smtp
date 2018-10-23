@@ -4,7 +4,7 @@ public class Client {
 
     public static void main(String[] args) {
 
-        MailSender.getInstance().send(new SimpleTextMail());
+        MailSender.getInstance().send(new ImageMail());
         System.out.println("Message sent");
     }
 }
