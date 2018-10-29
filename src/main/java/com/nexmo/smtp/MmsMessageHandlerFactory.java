@@ -44,23 +44,10 @@ public class MmsMessageHandlerFactory implements MessageHandlerFactory {
 
         @Override
         public void data(InputStream data) throws RejectException, TooMuchDataException, IOException {
-            Session session = Session.getInstance(new Properties());
-            try {
-                MimeMessage message = new MimeMessage(session, data);
-                Enumeration en = message.getAllHeaderLines();
-                while (en.hasMoreElements()){
-                    System.out.println(en.nextElement());
-                }
-                System.out.println("Data content type: "+message.getDataHandler().getContentType());
-
-            } catch (MessagingException e) {
-                e.printStackTrace();
-            }
-
-//            System.out.println("MAIL DATA");
-//            System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
-//            System.out.println(this.convertStreamToString(data));
-//            System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
+            System.out.println("MAIL DATA");
+            System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
+            System.out.println(this.convertStreamToString(data));
+            System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
         }
 
         @Override

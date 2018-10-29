@@ -6,7 +6,7 @@ public class Server {
 
     public static void main(String[] args) {
         SMTPServer smtpServer = new SMTPServer(new MmsMessageHandlerFactory());
-        smtpServer.setPort(25000);
+        smtpServer.setPort(4116);
         smtpServer.start();
 
 
