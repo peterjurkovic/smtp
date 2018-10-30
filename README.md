@@ -13,10 +13,14 @@ mm4-clien.jar -jar
 By default it sends **MM4_FORWARD_REQ** containing an image. In order to change the type just pass an additional parameter
 
 ```
-mm4-clien.jar -jar MM4_FORWARD_RES -Dport=25
+mm4-clien.jar -Dport=25 -jar MM4_FORWARD_RES 
 ```
+### 3. Verbose mode
+If you want to print out entire message pass `-Dverbose` parameter as following
 
-
+```
+mm4-clien.jar -Dverbose -jar MM4_FORWARD_RES 
+```
 
 ## Default values
 
