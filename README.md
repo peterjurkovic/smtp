@@ -10,7 +10,7 @@ Download [mm4-clien.jar](https://github.com/peterjurkovic/smtp/blob/master/mm4-c
 mm4-clien.jar -jar 
 ```
 
-By default it sends **MM4_FORWARD_REQ** containg an immage. In order to change the type just pass aditional parameter
+By default it sends **MM4_FORWARD_REQ** containing an image. In order to change the type just pass an additional parameter
 
 ```
 mm4-clien.jar -jar MM4_FORWARD_RES -Dport=25
