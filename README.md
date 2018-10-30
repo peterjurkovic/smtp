@@ -1,5 +1,5 @@
 # MM4 Client library
-MM$ client libreary for a testing purpose
+MM4 client libreary for a testing purpose
 
 ## How to use it
 ### 1. Download a jar lib
@@ -16,6 +16,7 @@ By default it sends **MM4_FORWARD_REQ** containing an image. In order to change 
 ```
 mm4-client.jar -Dport=25 -jar MM4_FORWARD_RES 
 ```
+Please note: every `-Dxxx` parameter must be placed before `-jar` flag
 ### 3. Verbose mode
 If you want to print out entire message pass `-Dverbose` parameter as following
 
