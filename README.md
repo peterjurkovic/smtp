@@ -7,19 +7,19 @@ Download [mm4-clien.jar](https://github.com/peterjurkovic/smtp/blob/master/mm4-c
 ### 2. Run the command
 
 ```
-mm4-clien.jar -jar 
+mm4-client.jar -jar 
 ```
 
 By default it sends **MM4_FORWARD_REQ** containing an image. In order to change the type just pass an additional parameter
 
 ```
-mm4-clien.jar -Dport=25 -jar MM4_FORWARD_RES 
+mm4-client.jar -Dport=25 -jar MM4_FORWARD_RES 
 ```
 ### 3. Verbose mode
 If you want to print out entire message pass `-Dverbose` parameter as following
 
 ```
-mm4-clien.jar -Dverbose -jar MM4_FORWARD_RES 
+mm4-client.jar -Dverbose -jar MM4_FORWARD_RES 
 ```
 
 ## Default values
@@ -40,7 +40,12 @@ mm4-clien.jar -Dverbose -jar MM4_FORWARD_RES
 ## Accepted Request types
 
 ```
-MM4_FORWARD_REQ,MM4_FORWARD_RES,MM4_DELIVERY_REPORT_REQ,MM4_DELIVERY_REPORT_RES,MM4_READ_REPLY_REPORT_REQ,MM4_READ_REPLY_REPORT_RES
+MM4_FORWARD_REQ
+MM4_FORWARD_RES
+MM4_DELIVERY_REPORT_REQ
+MM4_DELIVERY_REPORT_RES
+MM4_READ_REPLY_REPORT_REQ
+MM4_READ_REPLY_REPORT_RES
 ```
 
 
