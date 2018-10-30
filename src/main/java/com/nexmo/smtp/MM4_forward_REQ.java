@@ -21,6 +21,7 @@ public class MM4_forward_REQ extends AbstractMM4Message {
         setFromTo(helper);
         helper.setText("body text");
         helper.addAttachment("company-logo.png", new ClassPathResource("nexmo-logo.png"));
+        printMessage(mimeMessage);
     }
 
     @Override

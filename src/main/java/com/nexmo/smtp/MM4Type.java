@@ -27,7 +27,7 @@ public enum MM4Type {
         @Override
         public void prepare(MimeMessage message) throws MessagingException {
             setCommonHeaders(message);
-            message.setHeader("X-Mms-MM-Status-Code", "Forwarded");
+            message.setHeader("X-Mms-MM-Status-Code", System.getProperty("messageStatus", "Forwarded"));
         }
     },
 
@@ -73,15 +73,15 @@ public enum MM4Type {
 
 
     void setCommonHeaders(MimeMessage message) throws MessagingException {
-        message.setHeader("X-Mms-3GPP-Version", "1.0");
-        message.setHeader("X-Mms-Message-ID", "messageId");
-        message.setHeader("X-Mms-Transaction-ID", "transactionId");
+        message.setHeader("X-Mms-3GPP-Version", System.getProperty("version","1.0"));
+        message.setHeader("X-Mms-Message-ID", System.getProperty("messageId","messageId"));
+        message.setHeader("X-Mms-Transaction-ID", System.getProperty("transactionId", "transactionId"));
         message.setHeader("X-Mms-Message-Type", this.value);
     }
 
     void setResponseCommonHeaders(MimeMessage message) throws MessagingException {
         setCommonHeaders(message);
-        message.setHeader("X-Mms-Request-Status-Code", "0");
+        message.setHeader("X-Mms-Request-Status-Code", System.getProperty("requestStatus","0"));
     }
 
     public static String printTypes() {
