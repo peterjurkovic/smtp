@@ -20,8 +20,8 @@ mm4-clien.jar -jar MM4_FORWARD_RES -Dport=25
 
 ## Default values
 
-|           Header          |  Default value  |      Override      |
-|:-------------------------:|:---------------:|:------------------:|
+| Header                    | Default value   | Override           |
+|---------------------------|-----------------|--------------------|
 | host                      | localhost       | -Dhost=custom-host |
 | port                      | 4115            | -Dport=25          |
 | from                      | from@test.tld   | -Dfrom=custom      |
