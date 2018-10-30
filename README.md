@@ -1,8 +1,9 @@
 # MM4 Client library
+MM$ client libreary for a testing purpose
 
 ## How to use it
 ### 1. Download a jar lib
-Download [mm4-client.jar](https://github.com/peterjurkovic/smtp/blob/master/mm4-client.jar)
+Download [mm4-client.jar](https://github.com/peterjurkovic/smtp/raw/master/mm4-client.jar)
 
 ### 2. Run the command
 
