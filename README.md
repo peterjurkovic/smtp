@@ -37,3 +37,10 @@ mm4-clien.jar -Dverbose -jar MM4_FORWARD_RES
 | X-Mms-MM-Status-Code      | Forwarded       | -DmessageStatus    |
 | X-Mms-Request-Status-Code | 0               | -DrequestStatus    |
 
+## Accepted Request types
+
+```
+MM4_FORWARD_REQ,MM4_FORWARD_RES,MM4_DELIVERY_REPORT_REQ,MM4_DELIVERY_REPORT_RES,MM4_READ_REPLY_REPORT_REQ,MM4_READ_REPLY_REPORT_RES
+```
+
+
