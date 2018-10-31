@@ -12,7 +12,7 @@ public enum MM4Type {
         @Override
         public void prepare(MimeMessage message) throws MessagingException {
             setCommonHeaders(message);
-            message.setHeader("X-Mms-Ack-Request", "Yes");
+            message.setHeader("X-Mms-Ack-Request", System.getProperty("ac", "Yes"));
         }
     },
 
@@ -23,7 +23,7 @@ public enum MM4Type {
         }
     },
 
-    MM4_DELIVERY_REPORT_REQ("implements MimeMessagePreparator.REQ", MM4_delivery_report_REQ::new) {
+    MM4_DELIVERY_REPORT_REQ("MM4_delivery_report.REQ", MM4_delivery_report_REQ::new) {
         @Override
         public void prepare(MimeMessage message) throws MessagingException {
             setCommonHeaders(message);

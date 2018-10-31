@@ -5,7 +5,6 @@ import org.springframework.mail.javamail.MimeMessagePreparator;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
-import java.util.Enumeration;
 
 public abstract class AbstractMM4Message implements MimeMessagePreparator, Submitable {
 
