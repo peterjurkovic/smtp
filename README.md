@@ -38,6 +38,7 @@ mm4-client.jar -Dverbose -jar MM4_FORWARD_RES
 | X-Mms-Transaction-ID      | transactionId   | -DtransactionId    |
 | X-Mms-MM-Status-Code      | Forwarded       | -DmessageStatus    |
 | X-Mms-Request-Status-Code | 0               | -DrequestStatus    |
+| X-Mms-Ack-Request         | Yes             | -Dack              |
 
 ## Accepted Request types
 
