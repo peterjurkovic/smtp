@@ -12,7 +12,7 @@ public enum MM4Type {
         @Override
         public void prepare(MimeMessage message) throws MessagingException {
             setCommonHeaders(message);
-            message.setHeader("X-Mms-Ack-Request", System.getProperty("ac", "Yes"));
+            message.setHeader("X-Mms-Ack-Request", System.getProperty("ack", "Yes"));
         }
     },
 
