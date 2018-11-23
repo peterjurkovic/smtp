@@ -73,8 +73,9 @@ public enum MM4Type {
 
 
     void setCommonHeaders(MimeMessage message) throws MessagingException {
-        message.setHeader("X-Mms-3GPP-Version", System.getProperty("version","1.0"));
+        message.setHeader("X-Mms-3GPP-Version", System.getProperty("version","6.16.0"));
         message.setHeader("X-Mms-Message-ID", System.getProperty("messageId","messageId"));
+        message.setHeader("X-Mms-Originator-System", System.getProperty("originator", "verizon10@icmms1.sun5.lightsurf.net"));
         message.setHeader("X-Mms-Transaction-ID", System.getProperty("transactionId", "transactionId"));
         message.setHeader("X-Mms-Message-Type", this.value);
     }
