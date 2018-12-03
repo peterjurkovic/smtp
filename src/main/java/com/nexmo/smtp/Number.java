@@ -1,11 +1,11 @@
 package com.nexmo.smtp;
 
-public class SapNumber {
+public class Number {
 
     private static final String PLUS = "+";
     private static final String SUFFIX = "/TYPE=PLMN";
 
-    private SapNumber() {
+    private Number() {
     }
 
     public static String sender(String number) {
