@@ -8,7 +8,7 @@ public class MailSender extends JavaMailSenderImpl {
 
     private MailSender() {
         setHost(System.getProperty("host", "localhost"));
-        setPort(intProp("port", 4115));
+        setPort(intProp("port", 25));
     }
 
 

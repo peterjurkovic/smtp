@@ -25,8 +25,8 @@ public abstract class AbstractMM4Message implements MimeMessagePreparator, Submi
     }
 
     void setFromTo(MimeMessageHelper helper) throws MessagingException {
-        helper.setFrom(param("from", "from@test.tld"));
-        helper.setTo(param("to", "to@test.tld"));
+        helper.setFrom(SapNumber.sender(param("from", "19862000842")));
+        helper.setTo(SapNumber.recipient(param("to", "12345678")));
     }
 
     public static String param(String name, String fallback) {

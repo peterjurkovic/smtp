@@ -2,7 +2,10 @@ package com.nexmo.smtp;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.UUID;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
@@ -13,6 +16,8 @@ public enum MM4Type {
         public void prepare(MimeMessage message) throws MessagingException {
             setCommonHeaders(message);
             message.setHeader("X-Mms-Ack-Request", System.getProperty("ack", "Yes"));
+            message.setHeader("X-Mms-Delivery-Report", System.getProperty("deliveryReport", "Yes"));
+            message.setHeader("Date", System.getProperty("ack", new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z").format(new Date())));
         }
     },
 
@@ -74,9 +79,9 @@ public enum MM4Type {
 
     void setCommonHeaders(MimeMessage message) throws MessagingException {
         message.setHeader("X-Mms-3GPP-Version", System.getProperty("version","6.16.0"));
-        message.setHeader("X-Mms-Message-ID", System.getProperty("messageId","messageId"));
-        message.setHeader("X-Mms-Originator-System", System.getProperty("originator", "verizon10@icmms1.sun5.lightsurf.net"));
-        message.setHeader("X-Mms-Transaction-ID", System.getProperty("transactionId", "transactionId"));
+        message.setHeader("X-Mms-Message-ID", System.getProperty("messageId", UUID.randomUUID().toString()));
+        message.setHeader("X-Mms-Originator-System", System.getProperty("originator", "from@originator.com"));
+        message.setHeader("X-Mms-Transaction-ID", System.getProperty("transactionId", UUID.randomUUID().toString()));
         message.setHeader("X-Mms-Message-Type", this.value);
     }
 

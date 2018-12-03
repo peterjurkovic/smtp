@@ -1,21 +1,14 @@
 package com.nexmo.smtp;
 
 import org.apache.commons.io.IOUtils;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.subethamail.smtp.MessageContext;
 import org.subethamail.smtp.MessageHandler;
 import org.subethamail.smtp.MessageHandlerFactory;
 import org.subethamail.smtp.RejectException;
 import org.subethamail.smtp.TooMuchDataException;
 
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.internet.MimeMessage;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.StringWriter;
-import java.util.Enumeration;
-import java.util.Properties;
 
 public class MmsMessageHandlerFactory implements MessageHandlerFactory {
 
